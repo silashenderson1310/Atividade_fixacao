@@ -1,11 +1,96 @@
-function questao1(text) {
+//questao1
+
+var text = 'Silas'
+function nome(text) {
   return "ola" + text + "!";
 }
 
 function questao2(valor1,valor2,Callback) {
   console.log(Callback(valor1, valor2));
  }
- questao2(4, 2,function (val1, val2)
+ 
+ //questao2
+ 
+ questao2(4, 2,function (valor1, valor2)
  {
-   return val1 - val2;
+   return valor1 - valor2;
  })
+ 
+//questao3
+
+function um(x, callback) {
+	return function dois(y) {
+		callback(x, y)
+	};
+}
+var v1 = um(90, function(x, y) {
+  if(x%y == 0){
+    console.log('true')
+  }
+  else
+  {
+    console.log('false')
+  }
+})
+v1(3)
+
+//questao 4
+
+function NumMeses(num) {
+  if (num == 1) {
+    console.log("Janeiro")
+  }
+  if (num == 2) {
+    console.log("Fevereiro")
+  }
+  if (num == 3) {
+    console.log("Marçoo")
+  }
+  if (num == 4) {
+    console.log("Abril")
+  }
+  if (num == 5) {
+    console.log("Maio")
+  }
+  if (num == 6) {
+    console.log("Junho")
+  }
+  if (num == 7) {
+    console.log("Julho")
+  }
+  if (num == 8) {
+    console.log("Agosto")
+  }
+  if (num == 9) {
+    console.log("Setembro")
+  }
+  if (num == 10) {
+    console.log("Outubro")
+  }
+  if (num == 11) {
+    console.log("Novembro")
+  }
+  if (num == 12) {
+    console.log("Dezembro")
+  }
+}
+NumMeses(7)
+
+//questao 5
+
+function numeros(number1,number2, callback)
+{ 
+  return callback(number1,number2)
+}
+
+numeros(7,7, function(x,y){
+  if (x > y) {
+    console.log("O primeiro é o maior")
+  }
+  if (x < y) {
+    console.log("O primeiro é o menor")
+  }
+  else{
+    console.log("Os números são iguais")
+  }
+})
